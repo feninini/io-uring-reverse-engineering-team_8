@@ -47,6 +47,8 @@ io_imu_folio_data    | io_uring/kbuf.h    | nr_folios                           
 
 ### memmap.h
 
+### rw.h - zcrx.h
+
 Structure name | Defined in | Attributes | Caller Functions Source | source caller | usage
 ---------------|------------|------------|-------------------------|---------------|-------------------
 io_meta_state  | io_uring/rw.h | u32 seed, iov_iter_state iter_meta                                                                                              | Used in direct I/O routines (via io_async_rw)              | io_uring/rw.h  | Holds metadata for direct I/O operations                        
