@@ -45,3 +45,5 @@ io_uring_region_desc | linux/io_uring_types.h | user_addr, size, flags, mmap_off
                      |                    |                                                                                                  | io_create_region_mmap_safe             | io_uring/memmap.c      | parameter
 io_imu_folio_data    | io_uring/kbuf.h    | nr_folios                                                                                        | io_region_init_ptr                     | io_uring/memmap.c      | local variable
 
+### memmap.h
+
