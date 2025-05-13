@@ -47,6 +47,8 @@ io_imu_folio_data    | io_uring/kbuf.h    | nr_folios                           
 
 ### memmap.h
 
+Structure name | Defined in | Attributes | Caller Functions Source | source caller | usage
+---------------|------------|------------|-------------------------|---------------|-------------------
 io_meta_state  | io_uring/rw.h | u32 seed, iov_iter_state iter_meta                                                                                              | Used in direct I/O routines (via io_async_rw)              | io_uring/rw.h  | Holds metadata for direct I/O operations                        
 io_async_rw    | io_uring/rw.h | iou_vec vec, size_t bytes_done, iov_iter iter, iov_iter_state iter_state, iovec fast_iov, union { wait_page_queue wpq; or { uio_meta meta, io_meta_state meta_state } } | Invoked in io_prep_read/write and related async routines  | io_uring/rw.h  | Provides context for asynchronous I/O (supports buffered & direct modes)
 io_wq_work_list| io_uring/slist.h   | io_wq_work_node *first, io_wq_work_node *last            | wq_list_add_tail, wq_list_add_head, wq_list_cut   | io_uring/slist.h   | Manages the linked list of work nodes                 
